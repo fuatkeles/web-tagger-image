@@ -1,0 +1,502 @@
+body {
+  background-color: #f0f0f5; /* iOS arka plan rengi */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.footer {
+  width: 100%;
+  background-color: #f0f0f5; /* Açık gri arka plan rengi */
+  padding: 20px 0; /* İçerik etrafında boşluk */
+  
+}
+
+.footer-content {
+  max-width: 800px; /* İçeriğin genişliği */
+  margin: 0 auto; /* Ortala */
+  padding: 0 20px; /* İçerik etrafında yatay boşluk */
+  text-align: left; /* Metni sola yasla */
+}
+
+.footer h2 {
+  margin-bottom: 10px; /* Başlık altındaki boşluk */
+  font-size: 24px; /* Başlık boyutu */
+  color: #333; /* Başlık rengi */
+}
+
+.footer p {
+  margin: 5px 0; /* Paragraflar arasındaki boşluk */
+  font-size: 18px; /* Metin boyutu */
+  color: #666; /* Metin rengi */
+}
+
+.copyright {
+  margin-top: 20px; /* Üstten boşluk */
+  font-size: 18px; /* Metin boyutu */
+  color: #999; /* Metin rengi */
+  text-align: center; /* Metni ortala */
+  
+  padding: 10px;
+}
+
+.footer .copyright a {
+  color: #0073b1; /* LinkedIn mavi rengi */
+  text-decoration: none; /* Alt çizgi kaldır */
+}
+
+.footer .copyright a:hover {
+  text-decoration: underline; /* Üzerine gelindiğinde alt çizgi ekle */
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px; /* Siyah arka plan rengi */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #f0f0f5;
+}
+
+.navbar-brand {
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000; /* Beyaz metin rengi */
+  font-weight: 800;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand svg {
+  width: 200px; /* İstediğiniz genişlik */
+  height: auto; /* Oranları korumak için otomatik yükseklik */
+}
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link {
+  font-size: 20px;
+  
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  color: #000000; /* Beyaz metin rengi */
+  font-weight: 800;
+}
+
+
+
+.navbar-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-button {
+  background-color: #000000; /* Mavi arka plan rengi */
+  color: white;
+  border: 2px solid #000000;
+  font-weight: 800;
+}
+
+.login-button:hover {
+  background-color:  white; /* Hover durumunda koyu mavi arka plan */
+  color: #000000;
+}
+
+.signup-button {
+  background-color: white;
+  color: #000000; /* Mavi metin rengi */
+  border: 2px solid #000000;
+  font-weight: 800;
+}
+
+.signup-button:hover {
+  background-color: #000000; /* Hover durumunda açık gri arka plan */
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 80px; /* Navbar için boşluk bırakır */
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  gap: 20px; /* Harita ve dosya yükleme alanı arasına boşluk ekler */
+}
+
+.image-list {
+  width: 100%;
+  max-width: 1200px;
+  list-style-type: none;
+  padding: 0;
+  
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* iOS uyumlu gölge */
+}
+
+.image-list.empty {
+  border: none; /* Liste boş olduğunda sınırı kaldırır */
+  background-color: none; /* Liste boş olduğunda arka plan rengini kaldırır */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Yükseklik belirler */
+}
+
+.image-list.empty::after {
+  content: "No images to display. Please upload images."; /* Boş liste etiketi */
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.map-container {
+  width: 50%;
+  height: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* iOS uyumlu gölge */
+  border-radius: 10px;
+}
+
+.upload-container {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* iOS uyumlu gölge */
+}
+
+.upload-container.active {
+  border-color: #0C556B;
+  color: #0C556B;
+}
+
+.upload-input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.upload-label {
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  pointer-events: none;
+  font-weight: 800;
+}
+
+.upload-icon {
+  font-size: 48px; /* Yükleme simgesinin boyutunu ayarlar */
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.image-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.image-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.image-name {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row; /* Align buttons side by side */
+  gap: 8px;
+  align-items: center; /* Center buttons vertically */
+  justify-content: center; /* Center buttons horizontally */
+  width: 100%; /* Ensure the button group takes full width */
+  max-width: 600px; /* Set a maximum width */
+  margin: 0 auto; /* Center the button group */
+}
+
+.ios-button {
+  background-color: #44C4D4;
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+  font-weight: 800; /* iOS'e uygun kalınlık */
+}
+
+.ios-button:hover {
+  background-color: #0C556B;
+}
+
+.clear-button {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.add-geotag-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Increase horizontal padding */
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+  font-weight: 900; /* iOS'e uygun kalınlık */
+  white-space: nowrap; /* Ensure text stays on one line */
+}
+
+.add-geotag-button:hover {
+  background-color: #005bb5;
+}
+
+input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 5px 0;
+  width: calc(100% - 22px); /* Padding ve border genişliğini hesaba katmak için */
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input :focus {
+  border-color: #007aff; /* iOS mavi rengi */
+  box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+  outline: none;
+}
+
+
+
+.file-name-input::placeholder {
+  color: #888; /* Improve placeholder visibility */
+  font-style: normal; /* Make placeholder text normal style */
+}
+
+.loading-circle {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007aff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.checkmark-icon {
+  color: #4caf50; /* Green color for the checkmark */
+  font-size: 75px; /* Adjust the size as needed */
+  margin-left: 10px;
+}
+.hamburger-menu {
+  display: none; /* Masaüstünde gizle */
+}
+
+.progress-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Mevcut CSS kodlarınız */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-brand {
+    padding-left: 25px;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px; /* Navbar yüksekliği kadar boşluk bırak */
+    left: 0;
+    background-color: #f0f0f5;
+    z-index: 1000;
+    align-items: flex-end;
+    padding-right: 10px;
+    padding-top: 10px;
+    color: #ffffff;
+    
+    max-height: 0; /* Başlangıçta gizle */
+    overflow: hidden; /* İçerik dışarı taşmasın */
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out; /* Yumuşak geçiş için animasyon */
+    opacity: 0; /* Opaklık başlangıçta sıfır */
+  }
+  
+  .navbar-links.active {
+    max-height: 500px; /* Yeterli yüksekliği ayarla */
+    background-color: #000000d9; /* iOS arka plan rengi */
+    padding-bottom: 20px;
+    color: #ffffff;
+    opacity: 1; /* Menü açıldığında arka plan görünür hale gelir */
+  }
+  
+  .navbar-link, .navbar-button {
+    color: #ffffff; /* Mobilde beyaz metin rengi */
+    opacity: 0; /* Başlangıçta gizle */
+    transition: opacity 0s ease-in-out; /* Opaklık animasyonu, süresi kısaltılmıştır */
+  }
+  
+  /* Menü aktif olduğunda, butonlar ve bağlantılar */
+  .navbar-links.active .navbar-link, .navbar-links.active .navbar-button {
+    opacity: 1; /* Menü açıldığında butonlar görünür hale gelir */
+  }
+  
+ 
+  
+  .navbar-link, .navbar-button {
+    width: auto; /* Yatayda tüm ekranı kaplamasın */
+    text-align: right; /* Sağ hizalama */
+    padding: 10px;
+    margin-right: 35px; /* Sağda biraz boşluk bırak */
+  }
+  
+  .navbar-button {
+    width: fit-content; /* Buton genişliğini içeriğe göre ayarla */
+    padding: 10px 20px; /* Buton içi boşluk */
+  }
+  
+  .navbar-button.login-button {
+    background-color: #ffffff; /* Mobilde beyaz arka plan */
+    color: #000000; /* Siyah metin rengi */
+  }
+  
+  .navbar-button.signup-button {
+    background-color: #00fff2; /* Mobilde farklı arka plan rengi */
+    color: #000000; /* Beyaz metin rengi */
+  }
+  
+  .hamburger-menu {
+    display: block; /* Mobilde göster */
+    cursor: pointer;
+    margin-right: 25px; /* Sağda biraz boşluk bırak */
+
+  }
+
+  .top-container {
+    flex-direction: column;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 300px; /* Mobil cihazlar için harita yüksekliği */
+    order: 2; /* Haritayı ikinci sıraya yerleştir */
+  }
+
+  .upload-container {
+    width: 100%;
+    padding: 0px;
+    order: 1; /* Yükleme alanını birinci sıraya yerleştir */
+  }
+
+  .image-list {
+    padding: 0;
+    order: 3; /* Listeyi üçüncü sıraya yerleştir */
+  }
+
+  .image-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-preview {
+    width: 100%;
+    height: auto;
+  }
+  .button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-name-input {
+    width: 100%;
+  }
+
+  .add-geotag-button, .ios-button, .clear-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .actions-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
