@@ -9,7 +9,13 @@ const exiftool = require('exiftool-vendored').exiftool;
 const app = express();
 const upload = multer();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://web-tagger-frontend.onrender.com', // Frontend uygulamanızın URL'si
+    methods: ['GET', 'POST'], // Kullanmak istediğiniz HTTP yöntemleri
+    allowedHeaders: ['Content-Type'], // İzin verilen başlıklar
+    credentials: true // Eğer kimlik bilgileri gönderiyorsanız
+}));
+
 app.use(express.json()); // JSON verilerini işlemek için gerekli
 
 // Function to schedule file deletion
